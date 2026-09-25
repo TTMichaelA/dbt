@@ -817,8 +817,9 @@ class NodePatchParser(PatchParser[NodeTarget, ParsedNodePatch], Generic[NodeTarg
             **semantic_fields,
         )
 
+    @staticmethod
     def _semantic_patch_fields(
-        self, target: UnparsedModelUpdate, include: bool = True
+        target: UnparsedModelUpdate, include: bool = True
     ) -> Dict[str, Any]:
         if not include:
             return {}
